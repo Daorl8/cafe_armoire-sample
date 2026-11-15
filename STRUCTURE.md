@@ -1,13 +1,12 @@
-# STRUCTURE · cafe_armoire-sample (v0.1.4 · 레포 github.com/Daorl8/cafe_armoire-sample · 배포 cafe-armoire-sample.lgt3232.workers.dev)
+# STRUCTURE · cafe_armoire-sample (v0.2 · 레포 github.com/Daorl8/cafe_armoire-sample · 배포 cafe-armoire-sample.lgt3232.workers.dev)
 
 ```
 cafe_armoire-sample/
 ├─ index.html                 단일 파일 (CSS · JS 인라인)
 ├─ wrangler.toml              name = cafe-armoire-sample → cafe-armoire-sample.lgt3232.workers.dev
 ├─ .assetsignore              img/ · _old/ · 문서 · index_*.html · _deploy 배포 제외
-├─ ar-caslon.woff2            영문 제목 (Libre Caslon Display 400, 대문자 포함)
-├─ ar-notoserif.woff2         한글 제목 · 문장 (Noto Serif KR 500–600, 페이지 글자 전부)
-├─ ar-pretendard.woff2        본문 · 버튼 (Pretendard 400–600, 페이지 글자 전부)
+├─ ar-caslon.woff2            큰 영문 제목만 (Libre Caslon Display 400)
+├─ ar-pretendard.woff2        한글 전부 · 라벨 · 버튼 (Pretendard 400–600, 페이지 글자 + 영문 · 숫자 전체)
 ├─ ar-logo.svg / ar-logo-w.svg 로고 (잉크 #2A1E1C / 크림, potrace 벡터)
 ├─ ar-hero.webp               히어로 · 홀 전체 (4:5)
 ├─ ar-sofa · ar-door .webp    No.01 Story (소파 · 초록 장롱 문)
@@ -15,6 +14,7 @@ cafe_armoire-sample/
 ├─ ar-rooftop · ar-window · ar-cappuccino · ar-latte · ar-tables · ar-bar .webp   No.03 Vintage Rooms (PC: 루프탑 2×2)
 ├─ ar-mug · ar-mugs .webp     No.04 Online Store
 ├─ favicon.png · og-ar.jpg
+├─ _old/v0.1.4/               롤백용 이전 버전(index · 폰트 3종 · 문서, 배포 제외)
 ├─ img/                       다올 제공 원본 56장 (배포 제외 · 얼굴 · 다른 브랜드 포함, 레포에 올리지 말 것)
 └─ CHANGELOG.md / STRUCTURE.md
 ```
@@ -30,4 +30,4 @@ cafe_armoire-sample/
 - 그 밖: 네이버 길찾기 `map.naver.com/p/entry/place/1872641035` · 인스타 `https://www.instagram.com/cafe_armoire/`(대관 DM · 푸터)
 
 ## 폰트 재생성
-문구 바꾸면 빠진 글자 검사(LESSONS §26). 한글은 명조 · Pretendard 둘 다, 영문 제목 폰트는 대문자까지 포함.
+문구 바꾸면 빠진 글자 검사(LESSONS §26). 한글은 Pretendard 하나(v0.2부터 명조 없음), 영문 제목 폰트는 대문자까지 포함.

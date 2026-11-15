@@ -37,10 +37,9 @@
 </script>
 <style>
 @font-face{ font-family:"AR Display"; font-weight:400; font-display:swap; src:url("ar-caslon.woff2") format("woff2"); }
-@font-face{ font-family:"AR KSerif"; font-weight:500 600; font-display:swap; src:url("ar-notoserif.woff2") format("woff2"); }
 @font-face{ font-family:"AR Sans"; font-weight:400 600; font-display:swap; src:url("ar-pretendard.woff2") format("woff2"); }
 
-/* 모던 빈티지: 크림 종이 · 짙은 브라운 잉크 · 로고 레드 · 장롱 그린 · 카멜 */
+/* 모던 빈티지: 사진은 빈티지, 글자 · UI는 현대적으로(v0.2). 크림 종이 · 짙은 브라운 잉크 · 카멜 라벨 · 장롱 그린 · 레드는 로고와 네이버 플레이스 버튼에만 */
 :root{
   --paper:#F3ECE2;
   --paper2:#EAE0D2;
@@ -51,12 +50,13 @@
   --red:#C4474A;
   --red-dk:#9C3437;
   --camel:#9A6234;
+  --camel-dk:#8A5529;
+  --camel-lt:#D4A373;
   --green:#2E3A2C;
   --green-ink:#EFE8DC;
   --green-soft:#C2BBA9;
   --r:2px;
-  --display:"AR Display","AR KSerif",system-ui,-apple-system,"Segoe UI",sans-serif;
-  --kserif:"AR KSerif","AR Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --display:"AR Display","AR Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
   --sans:"AR Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
 }
 *{ box-sizing:border-box; margin:0; padding:0; }
@@ -72,7 +72,7 @@ a{ color:inherit; }
 .top{ position:sticky; top:0; z-index:50; background:#F3ECE2; border-bottom:1px solid var(--line);}
 .top .bar{ display:flex; align-items:center; justify-content:space-between; gap:16px; height:64px; }
 .brand img{ width:132px; height:auto; }
-.nav{ display:none; gap:26px; font-family:var(--display); font-size:1rem; letter-spacing:.04em; }
+.nav{ display:none; gap:28px; font-size:.76rem; font-weight:500; letter-spacing:.16em; text-transform:uppercase; }
 .nav a{ text-decoration:none; color:var(--soft); }
 .top .btn{ min-height:40px; padding:0 16px; font-size:.86rem; }
 .snav{ display:flex; gap:2px; overflow-x:auto; -webkit-overflow-scrolling:touch; scrollbar-width:none; border-top:1px solid var(--line); padding:0 12px; }
@@ -87,39 +87,40 @@ a{ color:inherit; }
 .btn.red{ background:var(--red-dk); border-color:var(--red-dk); color:#FFFFFF; }
 .btn.ink{ background:var(--ink); color:var(--paper); }
 .btn:active{ transform:scale(.98); }
-@media (hover:hover){ .btn:hover{ background:var(--ink); color:var(--paper); border-color:var(--ink); } }
+@media (hover:hover){ .btn:hover{ background:var(--ink); color:var(--paper); border-color:var(--ink); } .btn.ink:hover{ background:var(--camel-dk); border-color:var(--camel-dk); } }
 
 /* 공통 */
 .sec{ padding:96px 0; }
 .sec.alt{ background:var(--paper2); }
-.no{ display:block; font-family:var(--display); color:var(--red-dk); font-size:1.05rem; letter-spacing:.06em; }
-h2{ font-family:var(--display); font-weight:400; font-size:clamp(2.4rem, 8vw, 4rem); line-height:1.02; letter-spacing:-.01em; margin-top:6px; }
-.h2-ko{ display:block; font-family:var(--kserif); font-weight:500; font-size:clamp(1.05rem, 3vw, 1.25rem); color:var(--soft); margin-top:12px; }
+.no{ display:block; color:var(--camel-dk); font-size:.76rem; font-weight:600; letter-spacing:.18em; text-transform:uppercase; }
+h2{ font-family:var(--display); font-weight:400; font-size:clamp(2.4rem, 8vw, 4rem); line-height:1.02; letter-spacing:-.01em; margin-top:10px; }
+.h2-ko{ display:block; font-weight:500; font-size:clamp(.98rem, 2.6vw, 1.08rem); color:var(--soft); margin-top:12px; }
 .rule{ border:0; border-top:1px solid var(--ink); margin:22px 0 0; width:64px; }
 
 /* 히어로 */
 .hero{ padding:28px 0 84px; }
 .hero-grid{ display:grid; gap:36px; }
-.badge{ background:var(--red); padding:30px 26px; border-radius:var(--r); }
-.badge img{ width:100%; max-width:420px; height:auto; margin:0 auto; }
-.hero .kicker{ font-family:var(--display); font-size:1.1rem; letter-spacing:.05em; color:var(--red-dk); margin-top:30px; }
-.hero h1{ font-family:var(--display); font-weight:400; font-size:clamp(2.8rem, 10vw, 5rem); line-height:1; letter-spacing:-.015em; margin-top:8px; }
-.hero .story{ font-family:var(--kserif); font-weight:500; font-size:clamp(1.02rem, 2.8vw, 1.15rem); line-height:1.9; margin-top:22px; max-width:30em; }
+/* 로고 배지: 사장님 로고 원형(붉은 원) 그대로 작게 */
+.badge{ width:128px; height:128px; border-radius:50%; background:var(--red); display:grid; place-items:center; }
+.badge img{ width:96px; height:auto; }
+.hero .kicker{ font-size:.76rem; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:var(--camel-dk); margin-top:32px; }
+.hero h1{ font-family:var(--display); font-weight:400; font-size:clamp(2.8rem, 10vw, 5rem); line-height:1; letter-spacing:-.015em; margin-top:12px; }
+.hero .story{ font-weight:500; font-size:clamp(1.02rem, 2.6vw, 1.12rem); line-height:1.8; margin-top:22px; max-width:30em; }
 .facts{ display:flex; flex-wrap:wrap; gap:6px 18px; margin-top:22px; list-style:none; font-size:.92rem; color:var(--soft); }
 .facts b{ color:var(--ink); font-weight:600; }
 .cta3{ display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:10px; margin-top:28px; }
 .cta3 .btn:first-child{ grid-column:1 / -1; }
 .hero-photo{ position:relative; aspect-ratio:4/5; overflow:hidden; border-radius:var(--r); }
 .hero-photo img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
-.hero-photo figcaption{ position:absolute; left:0; right:0; bottom:0; padding:44px 18px 16px; color:#FFFFFF; font-family:var(--kserif); font-weight:500; font-size:.95rem; background:linear-gradient(to top, rgba(20,15,12,.7), rgba(20,15,12,0)); }
+.hero-photo figcaption{ position:absolute; left:0; right:0; bottom:0; padding:44px 18px 16px; color:#FFFFFF; font-weight:500; font-size:.92rem; background:linear-gradient(to top, rgba(20,15,12,.7), rgba(20,15,12,0)); }
 @media (min-width:640px){ .cta3{ display:flex; flex-wrap:wrap; } }
 @media (min-width:900px){ .hero{ padding:48px 0 104px; } .hero-grid{ grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr); gap:64px; align-items:center; } .hero-photo{ max-height:82svh; } }
 
 /* 스토리 */
 .story-grid{ display:grid; gap:40px; margin-top:40px; }
-.story-text p{ font-family:var(--kserif); font-weight:500; font-size:clamp(1.08rem, 3vw, 1.3rem); line-height:2; }
+.story-text p{ font-weight:400; font-size:clamp(1.04rem, 2.6vw, 1.15rem); line-height:1.95; }
 .story-text p + p{ margin-top:18px; }
-.story-text .sm{ font-family:var(--sans); font-weight:400; font-size:.95rem; color:var(--soft); }
+.story-text .sm{ font-weight:400; font-size:.95rem; color:var(--soft); }
 .duo{ display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:10px; }
 .duo figure{ aspect-ratio:4/5; overflow:hidden; border-radius:var(--r); }
 .duo figure:nth-child(2){ margin-top:40px; }
@@ -133,14 +134,14 @@ h2{ font-family:var(--display); font-weight:400; font-size:clamp(2.4rem, 8vw, 4r
 .item img{ width:100%; height:100%; object-fit:cover; }
 .item .body{ padding:22px 20px 24px; }
 .item .en{ font-family:var(--display); font-size:1.5rem; line-height:1.15; }
-.item h3{ font-family:var(--kserif); font-weight:600; font-size:1.05rem; margin-top:4px; }
+.item h3{ font-weight:600; font-size:1.05rem; margin-top:4px; }
 .item p{ color:var(--soft); font-size:.93rem; margin-top:10px; }
 .item .tag{ display:inline-block; margin-top:12px; font-size:.78rem; letter-spacing:.06em; color:var(--camel); border:1px solid var(--camel); padding:2px 8px; border-radius:var(--r); }
 @media (min-width:640px){ .menu-grid{ grid-template-columns:repeat(2, minmax(0,1fr)); } }
 @media (min-width:1000px){ .menu-grid{ grid-template-columns:repeat(3, minmax(0,1fr)); } }
 .drinks{ margin-top:40px; display:grid; gap:0; border-top:1px solid var(--ink); }
 .drinks li{ list-style:none; display:grid; grid-template-columns:minmax(0,1fr); gap:2px; padding:16px 2px; border-bottom:1px solid var(--line); }
-.drinks b{ font-family:var(--kserif); font-weight:600; font-size:1.05rem; }
+.drinks b{ font-weight:600; font-size:1.05rem; }
 .drinks b span{ font-family:var(--display); font-weight:400; color:var(--soft); margin-left:8px; font-size:1.05rem; }
 .drinks em{ font-style:normal; color:var(--soft); font-size:.93rem; }
 @media (min-width:900px){ .drinks{ grid-template-columns:repeat(2, minmax(0,1fr)); column-gap:48px; } }
@@ -149,9 +150,9 @@ h2{ font-family:var(--display); font-weight:400; font-size:clamp(2.4rem, 8vw, 4r
 
 /* 공간: 장롱 그린 띠 */
 .space{ background:var(--green); color:var(--green-ink); }
-.space .no{ color:#E2A9A4; }
+.space .no{ color:var(--camel-lt); }
 .space .h2-ko{ color:var(--green-soft); }
-.space-quote{ font-family:var(--kserif); font-weight:500; font-size:clamp(1.2rem, 3.6vw, 1.6rem); line-height:1.7; margin-top:30px; max-width:24em; }
+.space-quote{ font-weight:500; font-size:clamp(1.12rem, 3.2vw, 1.4rem); line-height:1.75; margin-top:30px; max-width:24em; }
 .gallery{ display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:10px; margin-top:44px; }
 .gallery figure{ position:relative; overflow:hidden; border-radius:var(--r); aspect-ratio:1/1; }
 .gallery figure.wide{ grid-column:1 / -1; aspect-ratio:3/2; }
@@ -173,7 +174,7 @@ h2{ font-family:var(--display); font-weight:400; font-size:clamp(2.4rem, 8vw, 4r
 .shop p{ color:var(--soft); margin-top:12px; }
 .shop-grid .btn{ margin-top:24px; }
 .rent{ margin-top:56px; padding:26px 22px; background:var(--card); border:1px solid var(--line); border-radius:var(--r); display:grid; gap:14px; }
-.rent b{ font-family:var(--kserif); font-weight:600; font-size:1.1rem; }
+.rent b{ font-weight:600; font-size:1.1rem; }
 .rent .row{ display:flex; flex-wrap:wrap; gap:10px; }
 @media (min-width:900px){ .shop-grid{ grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:72px; } .rent{ grid-template-columns:minmax(0,1fr) auto; align-items:center; padding:28px 32px; } }
 
@@ -181,10 +182,10 @@ h2{ font-family:var(--display); font-weight:400; font-size:clamp(2.4rem, 8vw, 4r
 .visit-grid{ display:grid; gap:28px; margin-top:44px; }
 .info{ border-top:1px solid var(--ink); }
 .info > div{ display:grid; grid-template-columns:76px minmax(0,1fr); gap:14px; padding:16px 0; border-bottom:1px solid var(--line); }
-.info dt{ font-family:var(--kserif); font-weight:600; color:var(--red-dk); font-size:.92rem; padding-top:1px; }
+.info dt{ font-weight:600; color:var(--camel-dk); font-size:.92rem; padding-top:1px; }
 .info dd small{ display:block; color:var(--soft); font-size:.88rem; margin-top:3px; }
 .info a{ text-decoration:underline; text-underline-offset:3px; }
-.hint{ margin-top:18px; padding:14px 16px; border:1px dashed var(--camel); border-radius:var(--r); font-family:var(--kserif); font-weight:500; }
+.hint{ margin-top:18px; padding:14px 16px; border:1px dashed var(--camel); border-radius:var(--r); font-weight:500; }
 .visit .cta{ display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:10px; margin-top:22px; }
 .visit .cta .btn:first-child{ grid-column:1 / -1; }
 .media{ display:grid; gap:12px; }
@@ -195,7 +196,7 @@ h2{ font-family:var(--display); font-weight:400; font-size:clamp(2.4rem, 8vw, 4r
 @media (min-width:1000px){ .visit-grid{ grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:48px; } }
 
 /* 푸터 */
-.foot{ background:var(--red-dk); color:#FFFFFF; padding:52px 0 120px; }
+.foot{ background:var(--ink); color:#FFFFFF; padding:52px 0 120px; }
 .foot img{ width:min(280px, 70%); }
 .foot p{ margin-top:14px; font-size:.9rem; }
 .foot p + p{ margin-top:6px; }
@@ -240,7 +241,7 @@ h2{ font-family:var(--display); font-weight:400; font-size:clamp(2.4rem, 8vw, 4r
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
-        <div class="badge reveal"><img src="ar-logo.svg" alt="CAFE ARMOIRE Coffee Atelier" width="420" height="134" /></div>
+        <div class="badge reveal"><img src="ar-logo.svg" alt="CAFE ARMOIRE Coffee Atelier" width="96" height="31" /></div>
         <p class="kicker reveal">Vintage Cafe · Konkuk Univ.</p>
         <h1 class="reveal">Step into<br />the wardrobe.</h1>
         <p class="story reveal">서울속 유럽 빈티지 카페</p>
@@ -345,7 +346,7 @@ h2{ font-family:var(--display); font-weight:400; font-size:clamp(2.4rem, 8vw, 4r
           <span class="h2-ko reveal">아르무아 스마트스토어</span>
           <p class="tagline reveal">We make noise,<br />not just brewing.</p>
           <p class="reveal">매장 밖에서도 아르무아를 만나보세요.</p>
-          <a class="btn red reveal" href="https://smartstore.naver.com/cafearmoire" target="_blank" rel="noopener">스마트스토어 바로가기</a>
+          <a class="btn ink reveal" href="https://smartstore.naver.com/cafearmoire" target="_blank" rel="noopener">스마트스토어 바로가기</a>
         </div>
       </div>
       <div class="rent reveal">
@@ -373,7 +374,7 @@ h2{ font-family:var(--display); font-weight:400; font-size:clamp(2.4rem, 8vw, 4r
           </dl>
           <p class="hint">입구를 못 찾겠다면 힌트는 'ㅈㄹ' 입니다</p>
           <div class="cta">
-            <a class="btn red" href="https://map.naver.com/p/entry/place/1872641035" target="_blank" rel="noopener">네이버 길찾기</a>
+            <a class="btn ink" href="https://map.naver.com/p/entry/place/1872641035" target="_blank" rel="noopener">네이버 길찾기</a>
             <a class="btn" href="https://m.place.naver.com/restaurant/1872641035/home" target="_blank" rel="noopener">네이버 플레이스</a>
             <a class="btn" href="tel:024639981">전화</a>
           </div>
