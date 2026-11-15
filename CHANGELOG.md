@@ -1,5 +1,9 @@
 # CHANGELOG · CAFE ARMOIRE 카페 아르무아 (서울 광진구 건대입구 · 빈티지 카페)
 
+## v0.1.2 · 2026-11-15 (검토 전 라이브 확인에서 발견 · 기계적 수정)
+- 실제 배포 주소가 `cafe-armoire-sample.lgt3232.workers.dev`(하이픈)인데 코드의 canonical · og:url · og:image · JSON-LD url/image 5곳과 wrangler.toml은 `cafearmoire-sample`(존재하지 않는 주소, 404) → 전부 `cafe-armoire-sample`로 맞춤. 이대로면 카톡 · 인스타 공유 썸네일이 안 뜸.
+- R-9: 라이브에 `ar-hall.webp`가 아직 200 → 레포에서 삭제 필요.
+
 ## v0.1.1 · 2026-11-15 (다올)
 - 히어로 사진: 장롱 문 → 가게 홀 전체가 보이는 사진(img 729716400, 4:5 · `ar-hero.webp`). 장롱 문 사진은 Story 두 장 중 하나로 이동(기존 홀 사진 `ar-hall.webp`과 같은 원본이라 삭제).
 - Vintage Rooms PC 빈칸: 루프탑 사진이 2열 × 2행을 차지하고 오른쪽에 창가 · 카푸치노 두 장을 위아래로 → 빈 공간 없음. 아래 줄에 라떼 · 새 사진(테이블석 img 729697173·29번, `ar-tables.webp`) · 커피바. 모바일은 커피바를 가로로 길게 마지막 줄 전체.

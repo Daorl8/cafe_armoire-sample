@@ -3,7 +3,7 @@
 ```
 cafe_armoire-sample/
 ├─ index.html                 단일 파일 (CSS · JS 인라인)
-├─ wrangler.toml              name = cafearmoire-sample → cafearmoire-sample.lgt3232.workers.dev
+├─ wrangler.toml              name = cafe-armoire-sample → cafe-armoire-sample.lgt3232.workers.dev
 ├─ .assetsignore              img/ · _old/ · 문서 · index_*.html · _deploy 배포 제외
 ├─ ar-caslon.woff2            영문 제목 (Libre Caslon Display 400, 대문자 포함)
 ├─ ar-notoserif.woff2         한글 제목 · 문장 (Noto Serif KR 500–600, 페이지 글자 전부)
