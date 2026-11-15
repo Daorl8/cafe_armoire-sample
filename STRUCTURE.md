@@ -1,4 +1,4 @@
-# STRUCTURE · cafe_armoire-sample (v0.2 · 레포 github.com/Daorl8/cafe_armoire-sample · 배포 cafe-armoire-sample.lgt3232.workers.dev)
+# STRUCTURE · cafe_armoire-sample (v0.2.1 · 레포 github.com/Daorl8/cafe_armoire-sample · 배포 cafe-armoire-sample.lgt3232.workers.dev)
 
 ```
 cafe_armoire-sample/
