@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<script>document.documentElement.classList.add('js')</script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>카페 아르무아 CAFE ARMOIRE | 건대입구 빈티지 카페 · Coffee Atelier</title>
+<meta name="description" content="장롱으로 들어가는 건대입구 빈티지 카페 아르무아. 바스크치즈케이크 · 휘낭시에 · 아인슈페너. 매일 12:00 - 22:00(라스트오더 21:30). 서울 광진구 동일로22길 117-27." />
+<link rel="canonical" href="https://cafearmoire-sample.lgt3232.workers.dev/" />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="ko_KR" />
+<meta property="og:site_name" content="CAFE ARMOIRE 카페 아르무아" />
+<meta property="og:title" content="CAFE ARMOIRE · 옷장 안의 카페" />
+<meta property="og:description" content="건대입구역 2번 출구, 붉은 벽돌 건물의 장롱으로 들어오세요. 매일 12:00 - 22:00." />
+<meta property="og:url" content="https://cafearmoire-sample.lgt3232.workers.dev/" />
+<meta property="og:image" content="https://cafearmoire-sample.lgt3232.workers.dev/og-ar.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="theme-color" content="#F3ECE2" />
+<link rel="icon" href="favicon.png" type="image/png" />
+<!-- 시안 도메인 = cafearmoire-sample.lgt3232.workers.dev. 고객 인계 시 grep lgt3232 → canonical·og:url·og:image·JSON-LD url/image 치환 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "카페 아르무아 CAFE ARMOIRE",
+  "url": "https://cafearmoire-sample.lgt3232.workers.dev/",
+  "image": "https://cafearmoire-sample.lgt3232.workers.dev/og-ar.jpg",
+  "telephone": "+82-2-463-9981",
+  "address": { "@type": "PostalAddress", "streetAddress": "동일로22길 117-27", "addressLocality": "광진구", "addressRegion": "서울특별시", "addressCountry": "KR" },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "12:00", "closes": "22:00" }
+  ],
+  "sameAs": ["https://www.instagram.com/cafe_armoire/", "https://m.place.naver.com/restaurant/1872641035/home", "https://smartstore.naver.com/cafearmoire"]
+}
+</script>
+<style>
+@font-face{ font-family:"AR Display"; font-weight:400; font-display:swap; src:url("ar-caslon.woff2") format("woff2"); }
+@font-face{ font-family:"AR KSerif"; font-weight:500 600; font-display:swap; src:url("ar-notoserif.woff2") format("woff2"); }
+@font-face{ font-family:"AR Sans"; font-weight:400 600; font-display:swap; src:url("ar-pretendard.woff2") format("woff2"); }
+
+/* 모던 빈티지: 크림 종이 · 짙은 브라운 잉크 · 로고 레드 · 장롱 그린 · 카멜 */
+:root{
+  --paper:#F3ECE2;
+  --paper2:#EAE0D2;
+  --card:#FAF6F0;
+  --ink:#2A1E1A;
+  --soft:#66574D;
+  --line:#D6C8B6;
+  --red:#C4474A;
+  --red-dk:#9C3437;
+  --camel:#9A6234;
+  --green:#2E3A2C;
+  --green-ink:#EFE8DC;
+  --green-soft:#C2BBA9;
+  --r:2px;
+  --display:"AR Display","AR KSerif",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --kserif:"AR KSerif","AR Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --sans:"AR Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{ box-sizing:border-box; margin:0; padding:0; }
+html{ scroll-behavior:smooth; scroll-padding-top:110px; -webkit-text-size-adjust:100%; }
+body{ font-family:var(--sans); color:var(--ink); background:var(--paper); line-height:1.75; font-size:16px; -webkit-font-smoothing:antialiased; word-break:keep-all; overflow-wrap:break-word; }
+img{ max-width:100%; height:auto; display:block; }
+a{ color:inherit; }
+:focus-visible{ outline:2px solid var(--red-dk); outline-offset:3px; }
+.wrap{ width:min(100% - 40px, 1160px); margin-inline:auto; }
+.nw{ white-space:nowrap; }
+
+/* 헤더 */
+.top{ position:sticky; top:0; z-index:50; background:rgba(243,236,226,.96); border-bottom:1px solid var(--line); -webkit-backdrop-filter:blur(8px); backdrop-filter:blur(8px); }
+.top .bar{ display:flex; align-items:center; justify-content:space-between; gap:16px; height:64px; }
+.brand img{ width:132px; height:auto; }
+.nav{ display:none; gap:26px; font-family:var(--display); font-size:1rem; letter-spacing:.04em; }
+.nav a{ text-decoration:none; color:var(--soft); }
+.top .btn{ min-height:40px; padding:0 16px; font-size:.86rem; }
+.snav{ display:flex; gap:2px; overflow-x:auto; -webkit-overflow-scrolling:touch; scrollbar-width:none; border-top:1px solid var(--line); padding:0 12px; }
+.snav::-webkit-scrollbar{ display:none; }
+.snav a{ flex:0 0 auto; display:flex; align-items:center; min-height:42px; padding:0 10px; font-size:.86rem; text-decoration:none; color:var(--soft); white-space:nowrap; }
+@media (min-width:900px){ .nav{ display:flex; } .snav{ display:none; } html{ scroll-padding-top:72px; } }
+@media (max-width:899px){ .top .btn{ display:none; } }
+@media (hover:hover){ .nav a:hover, .snav a:hover{ color:var(--ink); } }
+
+/* 버튼 */
+.btn{ display:inline-flex; align-items:center; justify-content:center; gap:8px; min-height:48px; padding:0 22px; border:1px solid var(--ink); border-radius:var(--r); text-decoration:none; font-weight:600; font-size:.94rem; transition:background-color .2s, color .2s, transform .1s; }
+.btn.red{ background:var(--red-dk); border-color:var(--red-dk); color:#FFFFFF; }
+.btn.ink{ background:var(--ink); color:var(--paper); }
+.btn:active{ transform:scale(.98); }
+@media (hover:hover){ .btn:hover{ background:var(--ink); color:var(--paper); border-color:var(--ink); } }
+
+/* 공통 */
+.sec{ padding:96px 0; }
+.sec.alt{ background:var(--paper2); }
+.no{ display:block; font-family:var(--display); color:var(--red-dk); font-size:1.05rem; letter-spacing:.06em; }
+h2{ font-family:var(--display); font-weight:400; font-size:clamp(2.4rem, 8vw, 4rem); line-height:1.02; letter-spacing:-.01em; margin-top:6px; }
+.h2-ko{ display:block; font-family:var(--kserif); font-weight:500; font-size:clamp(1.05rem, 3vw, 1.25rem); color:var(--soft); margin-top:12px; }
+.rule{ border:0; border-top:1px solid var(--ink); margin:22px 0 0; width:64px; }
+
+/* 히어로 */
+.hero{ padding:28px 0 84px; }
+.hero-grid{ display:grid; gap:36px; }
+.badge{ background:var(--red); padding:30px 26px; border-radius:var(--r); }
+.badge img{ width:100%; max-width:420px; height:auto; margin:0 auto; }
+.hero .kicker{ font-family:var(--display); font-size:1.1rem; letter-spacing:.05em; color:var(--red-dk); margin-top:30px; }
+.hero h1{ font-family:var(--display); font-weight:400; font-size:clamp(2.8rem, 10vw, 5rem); line-height:1; letter-spacing:-.015em; margin-top:8px; }
+.hero .story{ font-family:var(--kserif); font-weight:500; font-size:clamp(1.02rem, 2.8vw, 1.15rem); line-height:1.9; margin-top:22px; max-width:30em; }
+.facts{ display:flex; flex-wrap:wrap; gap:6px 18px; margin-top:22px; list-style:none; font-size:.92rem; color:var(--soft); }
+.facts b{ color:var(--ink); font-weight:600; }
+.cta3{ display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:10px; margin-top:28px; }
+.cta3 .btn:first-child{ grid-column:1 / -1; }
+.hero-photo{ position:relative; aspect-ratio:4/5; overflow:hidden; border-radius:var(--r); }
+.hero-photo img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+.hero-photo figcaption{ position:absolute; left:0; right:0; bottom:0; padding:44px 18px 16px; color:#FFFFFF; font-family:var(--kserif); font-size:.95rem; background:linear-gradient(to top, rgba(20,15,12,.7), rgba(20,15,12,0)); }
+@media (min-width:640px){ .cta3{ display:flex; flex-wrap:wrap; } }
+@media (min-width:900px){ .hero{ padding:48px 0 104px; } .hero-grid{ grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr); gap:64px; align-items:center; } .hero-photo{ max-height:82svh; } }
+
+/* 스토리 */
+.story-grid{ display:grid; gap:40px; margin-top:40px; }
+.story-text p{ font-family:var(--kserif); font-weight:500; font-size:clamp(1.08rem, 3vw, 1.3rem); line-height:2; }
+.story-text p + p{ margin-top:18px; }
+.story-text .sm{ font-family:var(--sans); font-weight:400; font-size:.95rem; color:var(--soft); }
+.duo{ display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:10px; }
+.duo figure{ aspect-ratio:4/5; overflow:hidden; border-radius:var(--r); }
+.duo figure:nth-child(2){ margin-top:40px; }
+.duo img{ width:100%; height:100%; object-fit:cover; }
+@media (min-width:900px){ .story-grid{ grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:72px; align-items:center; } }
+
+/* 메뉴 */
+.menu-grid{ display:grid; gap:22px; margin-top:44px; }
+.item{ background:var(--card); border:1px solid var(--line); border-radius:var(--r); overflow:hidden; display:flex; flex-direction:column; }
+.item figure{ aspect-ratio:4/5; overflow:hidden; }
+.item img{ width:100%; height:100%; object-fit:cover; }
+.item .body{ padding:22px 20px 24px; }
+.item .en{ font-family:var(--display); font-size:1.5rem; line-height:1.15; }
+.item h3{ font-family:var(--kserif); font-weight:600; font-size:1.05rem; margin-top:4px; }
+.item p{ color:var(--soft); font-size:.93rem; margin-top:10px; }
+.item .tag{ display:inline-block; margin-top:12px; font-size:.78rem; letter-spacing:.06em; color:var(--camel); border:1px solid var(--camel); padding:2px 8px; border-radius:var(--r); }
+@media (min-width:640px){ .menu-grid{ grid-template-columns:repeat(2, minmax(0,1fr)); } }
+@media (min-width:1000px){ .menu-grid{ grid-template-columns:repeat(3, minmax(0,1fr)); } }
+.drinks{ margin-top:40px; display:grid; gap:0; border-top:1px solid var(--ink); }
+.drinks li{ list-style:none; display:grid; grid-template-columns:minmax(0,1fr); gap:2px; padding:16px 2px; border-bottom:1px solid var(--line); }
+.drinks b{ font-family:var(--kserif); font-weight:600; font-size:1.05rem; }
+.drinks b span{ font-family:var(--display); font-weight:400; color:var(--soft); margin-left:8px; font-size:1.05rem; }
+.drinks em{ font-style:normal; color:var(--soft); font-size:.93rem; }
+@media (min-width:900px){ .drinks{ grid-template-columns:repeat(2, minmax(0,1fr)); column-gap:48px; } }
+.menu-note{ margin-top:24px; color:var(--soft); font-size:.92rem; }
+.menu-note a{ color:var(--ink); }
+
+/* 공간: 장롱 그린 띠 */
+.space{ background:var(--green); color:var(--green-ink); }
+.space .no{ color:#E2A9A4; }
+.space .h2-ko{ color:var(--green-soft); }
+.space-quote{ font-family:var(--kserif); font-weight:500; font-size:clamp(1.2rem, 3.6vw, 1.6rem); line-height:1.7; margin-top:30px; max-width:24em; }
+.gallery{ display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:10px; margin-top:44px; }
+.gallery figure{ position:relative; overflow:hidden; border-radius:var(--r); aspect-ratio:1/1; }
+.gallery figure.wide{ grid-column:1 / -1; aspect-ratio:3/2; }
+.gallery img{ width:100%; height:100%; object-fit:cover; }
+.gallery figcaption{ position:absolute; left:12px; bottom:10px; font-size:.82rem; color:#FFFFFF; text-shadow:0 1px 6px rgba(0,0,0,.6); }
+.floor{ display:grid; gap:10px; margin-top:28px; list-style:none; }
+.floor li{ border-top:1px solid rgba(239,232,220,.3); padding-top:12px; }
+.floor b{ font-family:var(--display); font-weight:400; font-size:1.35rem; display:block; }
+.floor span{ color:var(--green-soft); font-size:.94rem; }
+@media (min-width:900px){ .gallery{ grid-template-columns:repeat(3, minmax(0,1fr)); gap:14px; } .gallery figure.wide{ grid-column:span 2; aspect-ratio:auto; } .floor{ grid-template-columns:repeat(2, minmax(0,1fr)); gap:28px; } }
+
+/* 스토어 */
+.shop-grid{ display:grid; gap:36px; align-items:center; }
+.shop-photos{ display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:10px; }
+.shop-photos figure{ aspect-ratio:4/5; overflow:hidden; border-radius:var(--r); }
+.shop-photos img{ width:100%; height:100%; object-fit:cover; }
+.shop .tagline{ font-family:var(--display); font-size:clamp(1.3rem, 3.8vw, 1.7rem); line-height:1.3; margin-top:26px; }
+.shop p{ color:var(--soft); margin-top:12px; }
+.shop .btn{ margin-top:24px; }
+.rent{ margin-top:56px; padding:26px 22px; background:var(--card); border:1px solid var(--line); border-radius:var(--r); display:grid; gap:14px; }
+.rent b{ font-family:var(--kserif); font-weight:600; font-size:1.1rem; }
+.rent .row{ display:flex; flex-wrap:wrap; gap:10px; }
+@media (min-width:900px){ .shop-grid{ grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:72px; } .rent{ grid-template-columns:minmax(0,1fr) auto; align-items:center; padding:28px 32px; } }
+
+/* 오시는 길 */
+.visit-grid{ display:grid; gap:28px; margin-top:44px; }
+.info{ border-top:1px solid var(--ink); }
+.info > div{ display:grid; grid-template-columns:76px minmax(0,1fr); gap:14px; padding:16px 0; border-bottom:1px solid var(--line); }
+.info dt{ font-family:var(--kserif); font-weight:600; color:var(--red-dk); font-size:.92rem; padding-top:1px; }
+.info dd small{ display:block; color:var(--soft); font-size:.88rem; margin-top:3px; }
+.info a{ text-decoration:underline; text-underline-offset:3px; }
+.hint{ margin-top:18px; padding:14px 16px; border:1px dashed var(--camel); border-radius:var(--r); font-family:var(--kserif); font-weight:500; }
+.visit .cta{ display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:10px; margin-top:22px; }
+.visit .cta .btn:first-child{ grid-column:1 / -1; }
+.media{ display:grid; gap:12px; }
+.media figure{ aspect-ratio:3/2; overflow:hidden; border-radius:var(--r); }
+.media img{ width:100%; height:100%; object-fit:cover; }
+.map{ width:100%; height:260px; border:0; border-radius:var(--r); background:#DDD; display:block; }
+@media (min-width:768px){ .visit .cta{ display:flex; flex-wrap:wrap; } .map{ height:340px; } }
+@media (min-width:1000px){ .visit-grid{ grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:48px; } }
+
+/* 푸터 */
+.foot{ background:var(--red-dk); color:#FFFFFF; padding:52px 0 120px; }
+.foot img{ width:min(280px, 70%); }
+.foot p{ margin-top:14px; font-size:.9rem; }
+.foot p + p{ margin-top:6px; }
+.foot a{ text-decoration:underline; text-underline-offset:3px; }
+@media (min-width:900px){ .foot{ padding-bottom:52px; } }
+
+/* 하단 바: 네이버 플레이스 · 스마트스토어 · 전화 */
+.quick{ position:fixed; left:0; right:0; bottom:0; z-index:60; display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:6px; padding:8px 10px calc(8px + env(safe-area-inset-bottom)); background:var(--card); border-top:1px solid var(--line); }
+.quick a{ display:flex; align-items:center; justify-content:center; min-height:48px; border:1px solid var(--ink); border-radius:var(--r); font-size:.86rem; font-weight:600; text-decoration:none; text-align:center; }
+.quick a.red{ background:var(--red-dk); border-color:var(--red-dk); color:#FFFFFF; }
+@media (min-width:900px){ .quick{ display:none; } }
+
+/* 나타나기 (모션 강제 재생 · 다올 방침) */
+.js .reveal{ opacity:0; transform:translateY(16px); transition:opacity .8s ease var(--d,0s), transform .8s ease var(--d,0s); }
+.js .reveal.in{ opacity:1; transform:none; }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="카페 아르무아 처음으로"><img src="ar-logo.svg" alt="CAFE ARMOIRE Coffee Atelier" width="132" height="42" /></a>
+    <nav class="nav" aria-label="섹션">
+      <a href="#story">Story</a>
+      <a href="#menu">Menu</a>
+      <a href="#space">Space</a>
+      <a href="#shop">Shop</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <a class="btn red" href="https://m.place.naver.com/restaurant/1872641035/home" target="_blank" rel="noopener">네이버 플레이스</a>
+  </div>
+  <nav class="snav" aria-label="섹션 바로가기">
+    <a href="#story">스토리</a>
+    <a href="#menu">메뉴</a>
+    <a href="#space">공간</a>
+    <a href="#shop">스토어 · 대관</a>
+    <a href="#visit">오시는 길</a>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="badge reveal"><img src="ar-logo.svg" alt="CAFE ARMOIRE Coffee Atelier" width="420" height="134" /></div>
+        <p class="kicker reveal">Vintage Cafe · Konkuk Univ.</p>
+        <h1 class="reveal">Step into<br />the wardrobe.</h1>
+        <p class="story reveal">누군가의 작업실에 들어온 당신은 방한켠 구석에 있는 옷장문을 열어 그안으로 들어간다.</p>
+        <ul class="facts reveal">
+          <li><b>매일</b> <span class="nw">12:00 - 22:00</span></li>
+          <li><b>라스트오더</b> <span class="nw">21:30</span></li>
+          <li>건대입구역 2번 출구에서 <span class="nw">211m</span></li>
+        </ul>
+        <div class="cta3 reveal">
+          <a class="btn red" href="https://m.place.naver.com/restaurant/1872641035/home" target="_blank" rel="noopener">네이버 플레이스</a>
+          <a class="btn" href="https://smartstore.naver.com/cafearmoire" target="_blank" rel="noopener">스마트스토어</a>
+          <a class="btn" href="tel:024639981">전화 <span class="nw">02-463-9981</span></a>
+        </div>
+      </div>
+      <figure class="hero-photo">
+        <img src="ar-door.webp" alt="짙은 초록색 나무 장롱 문" width="1000" height="1250" fetchpriority="high" />
+        <figcaption>입구를 못 찾겠다면 힌트는 'ㅈㄹ' 입니다</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="sec alt" id="story" aria-labelledby="story-h">
+    <div class="wrap">
+      <span class="no reveal">No. 01</span>
+      <h2 id="story-h" class="reveal">The Story</h2>
+      <span class="h2-ko reveal">옷장 안의 판타지</span>
+      <div class="story-grid">
+        <div class="story-text reveal">
+          <p>누군가의 작업실에 들어온 당신은 방한켠 구석에 있는 옷장문을 열어 그안으로 들어간다.</p>
+          <p>어릴적 우리는 옷장안의 판타지를 누구나 꿈꿨던 적이 있을 것이다.</p>
+          <p>현실에서 지쳐있던 당신의 무게를 내려놓고 비밀스런 옷장안에서 만큼은 여유라는 판타지를 느끼기를 바란다.</p>
+          <p class="sm">armoire(아르무아)는 프랑스어로 '옷장'이라는 뜻이에요.</p>
+        </div>
+        <div class="duo reveal">
+          <figure><img src="ar-sofa.webp" alt="빈티지 액자가 걸린 벽 앞의 가죽 소파와 나무 테이블" width="1000" height="1000" loading="lazy" /></figure>
+          <figure><img src="ar-hall.webp" alt="원목 테이블과 빈티지 의자가 놓인 넓은 홀" width="1000" height="1000" loading="lazy" /></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="menu" aria-labelledby="menu-h">
+    <div class="wrap">
+      <span class="no reveal">No. 02</span>
+      <h2 id="menu-h" class="reveal">Signature</h2>
+      <span class="h2-ko reveal">#인생바치케 · #휘낭시에맛집</span>
+      <div class="menu-grid">
+        <article class="item reveal">
+          <figure><img src="ar-basque.webp" alt="종이에 싸인 초코 바스크치즈케이크 두 판" width="720" height="900" loading="lazy" /></figure>
+          <div class="body"><span class="en">Chocolate Basque</span><h3>초코 바스크치즈케이크</h3><p>최고의 초코 바스크치즈케이크는 보기만 해도 먹음직스러워야죠?</p></div>
+        </article>
+        <article class="item reveal">
+          <figure><img src="ar-sweetpotato.webp" alt="고구마가 박힌 바스크치즈케이크 한 조각과 군고구마" width="900" height="900" loading="lazy" /></figure>
+          <div class="body"><span class="en">Sweet Potato Basque</span><h3>호구마 바스크치즈케이크</h3><p>진한 고구마 바스크치즈케이크 안에 갓 구운 호박고구마가 들어가 사르르 녹아내릴 것 만 같은 촉촉함과 부드러운 단맛이 일품입니다.</p><span class="tag">WINTER</span></div>
+        </article>
+        <article class="item reveal">
+          <figure><img src="ar-financier.webp" alt="트레이에 줄지어 놓인 휘낭시에, 일부는 노란 커스터드 크림" width="800" height="1000" loading="lazy" /></figure>
+          <div class="body"><span class="en">Financier</span><h3>휘낭시에 · 더블 커스터드 휘낭시에</h3><p>추운계절이 돌아오면 찾게되는 '카푸치노' 그리고 '휘낭시에'</p></div>
+        </article>
+      </div>
+      <ul class="drinks reveal">
+        <li><b>아인슈페너<span>Einspänner</span></b><em>크림과 커피를 함께 마시면 더욱 맛있게 드실 수 있습니다</em></li>
+        <li><b>흑임자슈페너<span>Black Sesame</span></b><em>고소~한 흑임자 크림이 올라간 라떼</em></li>
+        <li><b>카푸치노<span>Cappuccino</span></b><em>추운 계절, 휘낭시에와 함께</em></li>
+        <li><b>초당옥수수라떼 · 딸기라떼<span>Seasonal</span></b><em>계절마다 돌아오는 시즌 라떼</em></li>
+      </ul>
+      <p class="menu-note reveal">아르무아는 La Marzocco GB5 머신을 사용합니다. 전체 메뉴와 가격은 <a href="https://m.place.naver.com/restaurant/1872641035/home" target="_blank" rel="noopener">네이버 플레이스</a>에서 확인해 주세요.</p>
+    </div>
+  </section>
+
+  <section class="sec space" id="space" aria-labelledby="space-h">
+    <div class="wrap">
+      <span class="no reveal">No. 03</span>
+      <h2 id="space-h" class="reveal">Vintage Rooms</h2>
+      <span class="h2-ko reveal">서울속 유럽 빈티지 카페</span>
+      <p class="space-quote reveal">100년이 지나도 가치있는 것.<br />빈티지의 매력은 그런게 아닐까요?</p>
+      <div class="gallery">
+        <figure class="wide reveal"><img src="ar-rooftop.webp" alt="붉은 벽돌 벽과 샹들리에가 있는 3층 루프탑 공간" width="1100" height="1100" loading="lazy" /><figcaption>3F · Rooftop</figcaption></figure>
+        <figure class="reveal"><img src="ar-window.webp" alt="창가를 따라 나무 바닥과 샹들리에가 이어지는 복도형 공간" width="1200" height="800" loading="lazy" /><figcaption>Window</figcaption></figure>
+        <figure class="reveal"><img src="ar-cappuccino.webp" alt="창가 원목 선반 위 카푸치노와 브라우니" width="1000" height="1000" loading="lazy" /><figcaption>Window seat</figcaption></figure>
+        <figure class="reveal"><img src="ar-latte.webp" alt="라떼와 아메리카노, 초코 케이크가 놓인 트레이" width="1000" height="1000" loading="lazy" /><figcaption>Coffee &amp; Cake</figcaption></figure>
+        <figure class="reveal"><img src="ar-bar.webp" alt="커피 바와 작업대, 빈티지 소품이 놓인 1층" width="1200" height="675" loading="lazy" /><figcaption>Coffee Bar</figcaption></figure>
+      </div>
+      <ul class="floor">
+        <li class="reveal"><b>3F &amp; Rooftop</b><span>3층 문을 활짝 열어서 루프탑과 하나의 공간으로 즐길 수 있습니다.</span></li>
+        <li class="reveal"><b>Beer Table</b><span>독일에서 건너온 비어테이블로 한층 더 편안하고 안락한 무드</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec alt shop" id="shop" aria-labelledby="shop-h">
+    <div class="wrap">
+      <div class="shop-grid">
+        <div class="shop-photos reveal">
+          <figure><img src="ar-mug.webp" alt="CAFE ARMOIRE 로고가 찍힌 크림색 머그" width="900" height="1125" loading="lazy" /></figure>
+          <figure><img src="ar-mugs.webp" alt="야외 테이블 위 크림색 · 검은색 아르무아 머그 두 개" width="900" height="1199" loading="lazy" /></figure>
+        </div>
+        <div>
+          <span class="no reveal">No. 04</span>
+          <h2 id="shop-h" class="reveal">Online Store</h2>
+          <span class="h2-ko reveal">아르무아 스마트스토어</span>
+          <p class="tagline reveal">We make noise,<br />not just brewing.</p>
+          <p class="reveal">매장 밖에서도 아르무아를 만나보세요.</p>
+          <a class="btn red reveal" href="https://smartstore.naver.com/cafearmoire" target="_blank" rel="noopener">스마트스토어 바로가기</a>
+        </div>
+      </div>
+      <div class="rent reveal">
+        <div><b>대관 · 문의</b><p style="color:var(--soft);margin-top:4px">대관 및 문의사항은 전화 및 DM</p></div>
+        <div class="row">
+          <a class="btn ink" href="tel:024639981">전화 <span class="nw">02-463-9981</span></a>
+          <a class="btn" href="https://www.instagram.com/cafe_armoire/" target="_blank" rel="noopener">인스타그램 DM</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec visit" id="visit" aria-labelledby="visit-h">
+    <div class="wrap">
+      <span class="no reveal">No. 05</span>
+      <h2 id="visit-h" class="reveal">Find the Wardrobe</h2>
+      <span class="h2-ko reveal">오시는 길</span>
+      <div class="visit-grid">
+        <div class="reveal">
+          <dl class="info">
+            <div><dt>주소</dt><dd>서울 광진구 동일로22길 <span class="nw">117-27</span> 아르무아<small>건대입구역 2번 출구에서 211m</small></dd></div>
+            <div><dt>찾아가는 길</dt><dd>건대입구역 2번출구로 나오셔서 '건대 맛의 거리'에 있는 올리브영 골목으로 들어오셔서 100m정도 걸어 오시면 왼쪽 붉은 벽돌로 되어있는 건물의 장롱으로 입장하여 주세요</dd></div>
+            <div><dt>영업</dt><dd>매일 <span class="nw">12:00 - 22:00</span><small><span class="nw">21:30</span> 라스트오더</small></dd></div>
+            <div><dt>전화</dt><dd><a class="nw" href="tel:024639981">02-463-9981</a></dd></div>
+          </dl>
+          <p class="hint">입구를 못 찾겠다면 힌트는 'ㅈㄹ' 입니다</p>
+          <div class="cta">
+            <a class="btn red" href="https://map.naver.com/p/entry/place/1872641035" target="_blank" rel="noopener">네이버 길찾기</a>
+            <a class="btn" href="https://m.place.naver.com/restaurant/1872641035/home" target="_blank" rel="noopener">네이버 플레이스</a>
+            <a class="btn" href="tel:024639981">전화</a>
+          </div>
+        </div>
+        <div class="media reveal">
+          <iframe class="map" title="카페 아르무아 위치 지도" src="https://www.google.com/maps?q=%EC%84%9C%EC%9A%B8%20%EA%B4%91%EC%A7%84%EA%B5%AC%20%EB%8F%99%EC%9D%BC%EB%A1%9C22%EA%B8%B8%20117-27&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <img src="ar-logo-w.svg" alt="" width="280" height="89" loading="lazy" />
+    <p>카페 아르무아 · 서울 광진구 동일로22길 <span class="nw">117-27</span> · <a class="nw" href="tel:024639981">02-463-9981</a></p>
+    <p><a href="https://www.instagram.com/cafe_armoire/" target="_blank" rel="noopener">@cafe_armoire</a> · <a href="https://smartstore.naver.com/cafearmoire" target="_blank" rel="noopener">스마트스토어</a> · <a href="https://m.place.naver.com/restaurant/1872641035/home" target="_blank" rel="noopener">네이버 플레이스</a></p>
+    <p>© CAFE ARMOIRE</p>
+  </div>
+</footer>
+
+<nav class="quick" aria-label="빠른 연결">
+  <a class="red" href="https://m.place.naver.com/restaurant/1872641035/home" target="_blank" rel="noopener">네이버 플레이스</a>
+  <a href="https://smartstore.naver.com/cafearmoire" target="_blank" rel="noopener">스마트스토어</a>
+  <a href="tel:024639981">전화</a>
+</nav>
+
+<script>
+(function(){
+  var pending=[].slice.call(document.querySelectorAll('.reveal'));
+  pending.forEach(function(el){
+    var sib=[].slice.call(el.parentNode.children).filter(function(c){ return c.classList.contains('reveal'); });
+    if(sib.length>1 && !el.style.getPropertyValue('--d')){ el.style.setProperty('--d',(Math.min(sib.indexOf(el),4)*0.06)+'s'); }
+  });
+  function showAll(){ pending.forEach(function(el){ el.classList.add('in'); }); pending=[]; }
+  function start(){
+    var t=setInterval(function(){
+      if(!pending.length){ clearInterval(t); return; }
+      if(window.innerHeight + window.pageYOffset >= document.documentElement.scrollHeight - 4){ showAll(); return; }
+      var line=window.innerHeight*0.92;
+      pending=pending.filter(function(el){
+        if(el.getBoundingClientRect().top < line){ el.classList.add('in'); return false; }
+        return true;
+      });
+    },120);
+  }
+  var started=false; function go(){ if(started) return; started=true; start(); }
+  if(document.fonts && document.fonts.ready){ document.fonts.ready.then(go); }
+  setTimeout(go,1200);
+  setTimeout(function(){ document.querySelectorAll('.hero .reveal').forEach(function(el){ el.classList.add('in'); }); },1600);
+})();
+</script>
+</body>
+</html>
