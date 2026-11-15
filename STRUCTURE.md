@@ -1,4 +1,4 @@
-# STRUCTURE · cafe_armoire-sample (v0.2.1 · 레포 github.com/Daorl8/cafe_armoire-sample · 배포 cafe-armoire-sample.lgt3232.workers.dev)
+# STRUCTURE · cafe_armoire-sample (v0.2.2 · 레포 github.com/Daorl8/cafe_armoire-sample · 배포 cafe-armoire-sample.lgt3232.workers.dev)
 
 ```
 cafe_armoire-sample/
@@ -21,7 +21,7 @@ cafe_armoire-sample/
 ※ 서브셋은 공백 U+0020 · U+00A0 포함(R-6).
 
 ## 섹션 순서
-헤더(+ 900px 미만 `.snav`) → 히어로 → `#story` → `#menu` → `#space`(초록 띠) → `#shop`(스토어 + 대관) → `#visit` → 푸터(짙은 레드) + 모바일 `.quick`.
+헤더(+ 900px 미만 `.snav`) → 히어로 → `#story` → `#menu` → `#space`(초록 띠) → `#shop`(스토어 + 대관) → `#visit` → 푸터(잉크 · 포커스 링 카멜) + 모바일 `.quick`.
 
 ## 필수 버튼 (사장님 요청)
 - 네이버 플레이스 `https://m.place.naver.com/restaurant/1872641035/home`: 헤더 · 히어로 · 메뉴 안내 · 오시는 길 · 푸터 · 하단 바

@@ -95,7 +95,6 @@ a{ color:inherit; }
 .no{ display:block; color:var(--camel-dk); font-size:.76rem; font-weight:600; letter-spacing:.18em; text-transform:uppercase; }
 h2{ font-family:var(--display); font-weight:400; font-size:clamp(2.4rem, 8vw, 4rem); line-height:1.02; letter-spacing:-.01em; margin-top:10px; }
 .h2-ko{ display:block; font-weight:500; font-size:clamp(.98rem, 2.6vw, 1.08rem); color:var(--soft); margin-top:12px; }
-.rule{ border:0; border-top:1px solid var(--ink); margin:22px 0 0; width:64px; }
 
 /* 히어로 */
 .hero{ padding:28px 0 84px; }
@@ -120,7 +119,7 @@ h2{ font-family:var(--display); font-weight:400; font-size:clamp(2.4rem, 8vw, 4r
 .story-grid{ display:grid; gap:40px; margin-top:40px; }
 .story-text p{ font-weight:400; font-size:clamp(1.04rem, 2.6vw, 1.15rem); line-height:1.95; }
 .story-text p + p{ margin-top:18px; }
-.story-text .sm{ font-weight:400; font-size:.95rem; color:var(--soft); }
+.story-text .sm{ font-size:.95rem; color:var(--soft); }
 .duo{ display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:10px; }
 .duo figure{ aspect-ratio:4/5; overflow:hidden; border-radius:var(--r); }
 .duo figure:nth-child(2){ margin-top:40px; }
@@ -189,8 +188,6 @@ h2{ font-family:var(--display); font-weight:400; font-size:clamp(2.4rem, 8vw, 4r
 .visit .cta{ display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:10px; margin-top:22px; }
 .visit .cta .btn:first-child{ grid-column:1 / -1; }
 .media{ display:grid; gap:12px; }
-.media figure{ aspect-ratio:3/2; overflow:hidden; border-radius:var(--r); }
-.media img{ width:100%; height:100%; object-fit:cover; }
 .map{ width:100%; height:260px; border:0; border-radius:var(--r); background:#DDD; display:block; }
 @media (min-width:768px){ .visit .cta{ display:flex; flex-wrap:wrap; } .map{ height:340px; } }
 @media (min-width:1000px){ .visit-grid{ grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:48px; } }
@@ -201,6 +198,7 @@ h2{ font-family:var(--display); font-weight:400; font-size:clamp(2.4rem, 8vw, 4r
 .foot p{ margin-top:14px; font-size:.9rem; }
 .foot p + p{ margin-top:6px; }
 .foot a{ text-decoration:underline; text-underline-offset:3px; }
+.foot a:focus-visible{ outline-color:var(--camel-lt); } /* 잉크 배경 위 포커스 링 7.1:1 (R-10) */
 @media (min-width:900px){ .foot{ padding-bottom:52px; } }
 
 /* 하단 바: 네이버 플레이스 · 스마트스토어 · 전화 */
