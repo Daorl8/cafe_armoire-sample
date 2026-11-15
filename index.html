@@ -155,13 +155,14 @@ h2{ font-family:var(--display); font-weight:400; font-size:clamp(2.4rem, 8vw, 4r
 .gallery{ display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:10px; margin-top:44px; }
 .gallery figure{ position:relative; overflow:hidden; border-radius:var(--r); aspect-ratio:1/1; }
 .gallery figure.wide{ grid-column:1 / -1; aspect-ratio:3/2; }
+@media (max-width:899px){ .gallery figure.last{ grid-column:1 / -1; aspect-ratio:16/9; } }
 .gallery img{ width:100%; height:100%; object-fit:cover; }
 .gallery figcaption{ position:absolute; left:12px; bottom:10px; font-size:.82rem; color:#FFFFFF; text-shadow:0 1px 6px rgba(0,0,0,.6); }
 .floor{ display:grid; gap:10px; margin-top:28px; list-style:none; }
 .floor li{ border-top:1px solid rgba(239,232,220,.3); padding-top:12px; }
 .floor b{ font-family:var(--display); font-weight:400; font-size:1.35rem; display:block; }
 .floor span{ color:var(--green-soft); font-size:.94rem; }
-@media (min-width:900px){ .gallery{ grid-template-columns:repeat(3, minmax(0,1fr)); gap:14px; } .gallery figure.wide{ grid-column:span 2; aspect-ratio:auto; } .floor{ grid-template-columns:repeat(2, minmax(0,1fr)); gap:28px; } }
+@media (min-width:900px){ .gallery{ grid-template-columns:repeat(3, minmax(0,1fr)); gap:14px; } .gallery figure.wide{ grid-column:span 2; grid-row:span 2; aspect-ratio:auto; } .floor{ grid-template-columns:repeat(2, minmax(0,1fr)); gap:28px; } }
 
 /* 스토어 */
 .shop-grid{ display:grid; gap:36px; align-items:center; }
@@ -255,7 +256,7 @@ h2{ font-family:var(--display); font-weight:400; font-size:clamp(2.4rem, 8vw, 4r
         </div>
       </div>
       <figure class="hero-photo">
-        <img src="ar-door.webp" alt="짙은 초록색 나무 장롱 문" width="1000" height="1250" fetchpriority="high" />
+        <img src="ar-hero.webp" alt="빈티지 조명 아래 원목 테이블과 의자들이 놓인 아르무아 홀" width="1000" height="1250" fetchpriority="high" />
         <figcaption>입구를 못 찾겠다면 힌트는 'ㅈㄹ' 입니다</figcaption>
       </figure>
     </div>
@@ -275,7 +276,7 @@ h2{ font-family:var(--display); font-weight:400; font-size:clamp(2.4rem, 8vw, 4r
         </div>
         <div class="duo reveal">
           <figure><img src="ar-sofa.webp" alt="빈티지 액자가 걸린 벽 앞의 가죽 소파와 나무 테이블" width="1000" height="1000" loading="lazy" /></figure>
-          <figure><img src="ar-hall.webp" alt="원목 테이블과 빈티지 의자가 놓인 넓은 홀" width="1000" height="1000" loading="lazy" /></figure>
+          <figure><img src="ar-door.webp" alt="짙은 초록색 나무 장롱 문" width="1000" height="1250" loading="lazy" /></figure>
         </div>
       </div>
     </div>
@@ -321,7 +322,8 @@ h2{ font-family:var(--display); font-weight:400; font-size:clamp(2.4rem, 8vw, 4r
         <figure class="reveal"><img src="ar-window.webp" alt="창가를 따라 나무 바닥과 샹들리에가 이어지는 복도형 공간" width="1200" height="800" loading="lazy" /><figcaption>Window</figcaption></figure>
         <figure class="reveal"><img src="ar-cappuccino.webp" alt="창가 원목 선반 위 카푸치노와 브라우니" width="1000" height="1000" loading="lazy" /><figcaption>Window seat</figcaption></figure>
         <figure class="reveal"><img src="ar-latte.webp" alt="라떼와 아메리카노, 초코 케이크가 놓인 트레이" width="1000" height="1000" loading="lazy" /><figcaption>Coffee &amp; Cake</figcaption></figure>
-        <figure class="reveal"><img src="ar-bar.webp" alt="커피 바와 작업대, 빈티지 소품이 놓인 1층" width="1200" height="675" loading="lazy" /><figcaption>Coffee Bar</figcaption></figure>
+        <figure class="reveal"><img src="ar-tables.webp" alt="원목 테이블과 라탄 의자, 액자가 걸린 흰 벽의 좌석" width="900" height="900" loading="lazy" /><figcaption>Tables</figcaption></figure>
+        <figure class="reveal last"><img src="ar-bar.webp" alt="커피 바와 작업대, 빈티지 소품이 놓인 1층" width="1200" height="675" loading="lazy" /><figcaption>Coffee Bar</figcaption></figure>
       </div>
       <ul class="floor">
         <li class="reveal"><b>3F &amp; Rooftop</b><span>3층 문을 활짝 열어서 루프탑과 하나의 공간으로 즐길 수 있습니다.</span></li>

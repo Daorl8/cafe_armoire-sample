@@ -9,10 +9,10 @@ cafe_armoire-sample/
 ├─ ar-notoserif.woff2         한글 제목 · 문장 (Noto Serif KR 500–600, 페이지 글자 전부)
 ├─ ar-pretendard.woff2        본문 · 버튼 (Pretendard 400–600, 페이지 글자 전부)
 ├─ ar-logo.svg / ar-logo-w.svg 로고 (잉크 #2A1E1C / 크림, potrace 벡터)
-├─ ar-door.webp               히어로 · 초록 장롱 문
-├─ ar-sofa · ar-hall .webp    No.01 Story
+├─ ar-hero.webp               히어로 · 홀 전체 (4:5)
+├─ ar-sofa · ar-door .webp    No.01 Story (소파 · 초록 장롱 문)
 ├─ ar-basque · ar-sweetpotato · ar-financier .webp   No.02 Signature
-├─ ar-rooftop · ar-window · ar-cappuccino · ar-latte · ar-bar .webp   No.03 Vintage Rooms
+├─ ar-rooftop · ar-window · ar-cappuccino · ar-latte · ar-tables · ar-bar .webp   No.03 Vintage Rooms (PC: 루프탑 2×2)
 ├─ ar-mug · ar-mugs .webp     No.04 Online Store
 ├─ favicon.png · og-ar.jpg
 ├─ img/                       다올 제공 원본 56장 (배포 제외 · 얼굴 · 다른 브랜드 포함, 레포에 올리지 말 것)
