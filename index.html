@@ -17,7 +17,7 @@
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="theme-color" content="#F6F5F2" />
+<meta name="theme-color" content="#F1ECE4" />
 <link rel="icon" href="favicon.png" type="image/png" />
 <!-- 시안 도메인 = cafe-armoire-sample.lgt3232.workers.dev. 고객 인계 시 grep lgt3232 → canonical·og:url·og:image·JSON-LD url/image 치환 -->
 <script type="application/ld+json">
@@ -36,16 +36,17 @@
 }
 </script>
 <style>
+@font-face{ font-family:"AR Mono"; font-weight:400; font-display:swap; src:url("ar-mono.woff2") format("woff2"); }
 @font-face{ font-family:"AR Sans"; font-weight:400 600; font-display:swap; src:url("ar-pretendard.woff2") format("woff2"); }
 
-/* 모던 빈티지(v0.3): 사진은 빈티지, 글자 · UI는 현대적으로. 고딕 하나 · 밝은 오프화이트 · 잉크 · 카멜 라벨 · 잉크 띠 · 레드는 로고와 네이버 플레이스 버튼에만 */
+/* 모던 빈티지(v0.3.2): 모던한 틀(고딕 제목 · 여백) + 빈티지 재질(바랜 종이색 · 종이 질감 · 타자기 라벨 · 필름 톤 사진). 바랜 종이 · 잉크 · 카멜 라벨 · 잉크 띠 · 레드는 로고와 네이버 플레이스 버튼에만 */
 :root{
-  --paper:#F6F5F2;
-  --paper2:#EDEBE6;
-  --card:#FFFFFF;
+  --paper:#F1ECE4;
+  --paper2:#E8E1D6;
+  --card:#FAF7F2;
   --ink:#1E1C1A;
   --soft:#5E5955;
-  --line:#DEDAD3;
+  --line:#D9D0C3;
   --red:#C4474A;
   --red-dk:#9C3437;
   --camel:#9A6234;
@@ -55,6 +56,7 @@
   --green-ink:#EFEDE8;
   --green-soft:#BDB8B0;
   --r:2px;
+  --mono:"AR Mono","AR Sans",ui-monospace,Menlo,Consolas,monospace;
   --sans:"AR Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
 }
 *{ box-sizing:border-box; margin:0; padding:0; }
@@ -66,11 +68,15 @@ a{ color:inherit; }
 .wrap{ width:min(100% - 40px, 1160px); margin-inline:auto; }
 .nw{ white-space:nowrap; }
 
+/* 빈티지 재질 (v0.3.2): 아주 옅은 종이 질감 + 사진 필름 톤 통일(로고 제외) */
+body::after{ content:""; position:fixed; inset:0; z-index:100; pointer-events:none; opacity:.07; mix-blend-mode:multiply; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .3  0 0 0 0 .25  0 0 0 0 .2  0 0 0 .9 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+.hero-photo img, .duo img, .item img, .gallery img, .shop-photos img{ filter:sepia(.14) saturate(.88) contrast(1.04) brightness(.98); }
+
 /* 헤더 */
-.top{ position:sticky; top:0; z-index:50; background:#F6F5F2; border-bottom:1px solid var(--line);}
+.top{ position:sticky; top:0; z-index:50; background:#F1ECE4; border-bottom:1px solid var(--line);}
 .top .bar{ display:flex; align-items:center; justify-content:space-between; gap:16px; height:64px; }
 .brand img{ width:132px; height:auto; }
-.nav{ display:none; gap:28px; font-size:.76rem; font-weight:500; letter-spacing:.16em; text-transform:uppercase; }
+.nav{ display:none; gap:28px; font-family:var(--mono); font-size:.86rem; letter-spacing:.06em; text-transform:uppercase; }
 .nav a{ text-decoration:none; color:var(--soft); }
 .top .btn{ min-height:40px; padding:0 16px; font-size:.86rem; }
 .snav{ display:flex; gap:2px; overflow-x:auto; -webkit-overflow-scrolling:touch; scrollbar-width:none; border-top:1px solid var(--line); padding:0 12px; }
@@ -90,7 +96,7 @@ a{ color:inherit; }
 /* 공통 */
 .sec{ padding:96px 0; }
 .sec.alt{ background:var(--paper2); }
-.no{ display:block; color:var(--camel-dk); font-size:.76rem; font-weight:600; letter-spacing:.18em; text-transform:uppercase; }
+.no{ display:block; font-family:var(--mono); color:var(--camel-dk); font-size:.95rem; letter-spacing:.06em; text-transform:uppercase; }
 h2{ font-weight:600; font-size:clamp(2.1rem, 7vw, 3.4rem); line-height:1.05; letter-spacing:-.035em; margin-top:10px; }
 .h2-ko{ display:block; font-weight:500; font-size:clamp(.98rem, 2.6vw, 1.08rem); color:var(--soft); margin-top:12px; }
 
@@ -98,7 +104,7 @@ h2{ font-weight:600; font-size:clamp(2.1rem, 7vw, 3.4rem); line-height:1.05; let
 .hero{ padding:28px 0 84px; }
 .hero-grid{ display:grid; gap:36px; }
 /* 로고 배지: 사장님 로고 원형(붉은 원) 그대로 작게 */
-.hero .kicker{ font-size:.76rem; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:var(--camel-dk); }
+.hero .kicker{ font-family:var(--mono); font-size:.88rem; letter-spacing:.08em; text-transform:uppercase; color:var(--camel-dk); }
 .hero h1{ margin-top:18px; }
 .hero h1 img{ width:min(100%, 520px); height:auto; }
 .space-quote{ font-weight:500; font-size:clamp(1.1rem, 3vw, 1.35rem); line-height:1.75; margin-top:28px; color:var(--green-ink); max-width:24em; }
@@ -129,16 +135,16 @@ h2{ font-weight:600; font-size:clamp(2.1rem, 7vw, 3.4rem); line-height:1.05; let
 .item figure{ aspect-ratio:4/5; overflow:hidden; }
 .item img{ width:100%; height:100%; object-fit:cover; }
 .item .body{ padding:22px 20px 24px; }
-.item .en{ display:block; font-size:.74rem; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--camel-dk); }
+.item .en{ display:block; font-family:var(--mono); font-size:.84rem; letter-spacing:.06em; text-transform:uppercase; color:var(--camel-dk); }
 .item h3{ font-weight:600; font-size:1.05rem; margin-top:4px; }
 .item p{ color:var(--soft); font-size:.93rem; margin-top:10px; }
-.item .tag{ display:inline-block; margin-top:12px; font-size:.78rem; letter-spacing:.06em; color:var(--camel); border:1px solid var(--camel); padding:2px 8px; border-radius:var(--r); }
+.item .tag{ display:inline-block; margin-top:12px; font-family:var(--mono); font-size:.82rem; letter-spacing:.06em; color:var(--camel); border:1px solid var(--camel); padding:2px 8px; border-radius:var(--r); }
 @media (min-width:640px){ .menu-grid{ grid-template-columns:repeat(2, minmax(0,1fr)); } }
 @media (min-width:1000px){ .menu-grid{ grid-template-columns:repeat(3, minmax(0,1fr)); } }
 .drinks{ margin-top:40px; display:grid; gap:0; border-top:1px solid var(--ink); }
 .drinks li{ list-style:none; display:grid; grid-template-columns:minmax(0,1fr); gap:2px; padding:16px 2px; border-bottom:1px solid var(--line); }
 .drinks b{ font-weight:600; font-size:1.05rem; }
-.drinks b span{ font-weight:500; color:var(--soft); margin-left:8px; font-size:.86rem; }
+.drinks b span{ font-family:var(--mono); font-weight:400; color:var(--soft); margin-left:8px; font-size:.86rem; }
 .drinks em{ font-style:normal; color:var(--soft); font-size:.93rem; }
 @media (min-width:900px){ .drinks{ grid-template-columns:repeat(2, minmax(0,1fr)); column-gap:48px; } }
 .menu-note{ margin-top:24px; color:var(--soft); font-size:.92rem; }
@@ -153,7 +159,7 @@ h2{ font-weight:600; font-size:clamp(2.1rem, 7vw, 3.4rem); line-height:1.05; let
 .gallery figure.wide{ grid-column:1 / -1; aspect-ratio:3/2; }
 @media (max-width:899px){ .gallery figure.last{ grid-column:1 / -1; aspect-ratio:16/9; } }
 .gallery img{ width:100%; height:100%; object-fit:cover; }
-.gallery figcaption{ position:absolute; left:12px; bottom:10px; font-size:.82rem; color:#FFFFFF; text-shadow:0 1px 6px rgba(0,0,0,.6); }
+.gallery figcaption{ position:absolute; left:12px; bottom:10px; font-family:var(--mono); font-size:.9rem; color:#FFFFFF; text-shadow:0 1px 6px rgba(0,0,0,.6); }
 .floor{ display:grid; gap:10px; margin-top:28px; list-style:none; }
 .floor li{ border-top:1px solid rgba(239,232,220,.3); padding-top:12px; }
 .floor b{ font-weight:600; font-size:1.1rem; letter-spacing:-.01em; display:block; }

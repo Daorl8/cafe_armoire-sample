@@ -1,10 +1,11 @@
-# STRUCTURE · cafe_armoire-sample (v0.3.1 · 레포 github.com/Daorl8/cafe_armoire-sample · 배포 cafe-armoire-sample.lgt3232.workers.dev)
+# STRUCTURE · cafe_armoire-sample (v0.3.2 · 레포 github.com/Daorl8/cafe_armoire-sample · 배포 cafe-armoire-sample.lgt3232.workers.dev)
 
 ```
 cafe_armoire-sample/
 ├─ index.html                 단일 파일 (CSS · JS 인라인)
 ├─ wrangler.toml              name = cafe-armoire-sample → cafe-armoire-sample.lgt3232.workers.dev
 ├─ .assetsignore              img/ · _old/ · 문서 · index_*.html · _deploy 배포 제외
+├─ ar-mono.woff2              타자기 라벨 (Courier Prime 400, 영문 · 라틴 1 · 가운데점) · 메뉴바 · 번호 · 캡션
 ├─ ar-pretendard.woff2        글꼴 하나(v0.3부터 영문 제목 포함) (Pretendard 400–600, 페이지 글자 + 영문 · 숫자 전체)
 ├─ ar-logo.svg / ar-logo-w.svg 로고 (잉크 #2A1E1C / 크림, potrace 벡터)
 ├─ ar-hero.webp               히어로 · 홀 전체 (4:5)
@@ -13,7 +14,7 @@ cafe_armoire-sample/
 ├─ ar-rooftop · ar-window · ar-cappuccino · ar-latte · ar-tables · ar-bar .webp   No.03 Space (PC: 테이블석 2×2)
 ├─ ar-mug · ar-mugs .webp     No.04 Shop
 ├─ favicon.png · og-ar.jpg
-├─ _old/v0.1.4/ · _old/v0.2.2/  롤백용 이전 버전(index · 폰트 · 문서, 배포 제외)
+├─ _old/v0.1.4/ · v0.2.2/ · v0.3.1/  롤백용 이전 버전(index · 폰트 · 문서, 배포 제외)
 ├─ img/                       다올 제공 원본 56장 (배포 제외 · 얼굴 · 다른 브랜드 포함, 레포에 올리지 말 것)
 └─ CHANGELOG.md / STRUCTURE.md
 ```
