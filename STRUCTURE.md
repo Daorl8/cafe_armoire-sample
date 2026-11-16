@@ -1,4 +1,4 @@
-# STRUCTURE · cafe_armoire-sample (v0.3.2 · 레포 github.com/Daorl8/cafe_armoire-sample · 배포 cafe-armoire-sample.lgt3232.workers.dev)
+# STRUCTURE · cafe_armoire-sample (v0.3.3 · 레포 github.com/Daorl8/cafe_armoire-sample · 배포 cafe-armoire-sample.lgt3232.workers.dev)
 
 ```
 cafe_armoire-sample/
@@ -14,14 +14,14 @@ cafe_armoire-sample/
 ├─ ar-rooftop · ar-window · ar-cappuccino · ar-latte · ar-tables · ar-bar .webp   No.03 Space (PC: 테이블석 2×2)
 ├─ ar-mug · ar-mugs .webp     No.04 Shop
 ├─ favicon.png · og-ar.jpg
-├─ _old/v0.1.4/ · v0.2.2/ · v0.3.1/  롤백용 이전 버전(index · 폰트 · 문서, 배포 제외)
+├─ _old/v0.1.4/ · v0.2.2/ · v0.3.1/ · v0.3.2/  롤백용 이전 버전(index · 폰트 · 문서, 배포 제외)
 ├─ img/                       다올 제공 원본 56장 (배포 제외 · 얼굴 · 다른 브랜드 포함, 레포에 올리지 말 것)
 └─ CHANGELOG.md / STRUCTURE.md
 ```
 ※ 서브셋은 공백 U+0020 · U+00A0 포함(R-6).
 
 ## 섹션 순서
-헤더(+ 900px 미만 `.snav`) → 히어로 → `#story` → `#menu` → `#space`(잉크 띠) → `#shop`(스토어 + 대관) → `#visit` → 푸터(잉크 · 포커스 링 카멜) + 모바일 `.quick`.
+헤더(+ 900px 미만 `.snav`) → 히어로 → `#story` → `#menu` → `#space`(장롱 초록 띠) → `#shop`(스토어 + 대관) → `#visit` → 푸터(잉크 · 포커스 링 카멜) + 모바일 `.quick`.
 
 ## 필수 버튼 (사장님 요청)
 - 네이버 플레이스 `https://m.place.naver.com/restaurant/1872641035/home`: 헤더 · 히어로 · 메뉴 안내 · 오시는 길 · 푸터 · 하단 바
