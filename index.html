@@ -39,7 +39,7 @@
 @font-face{ font-family:"AR Mono"; font-weight:400; font-display:swap; src:url("ar-mono.woff2") format("woff2"); }
 @font-face{ font-family:"AR Sans"; font-weight:400 600; font-display:swap; src:url("ar-pretendard.woff2") format("woff2"); }
 
-/* 모던 빈티지(v0.3.2): 모던한 틀(고딕 제목 · 여백) + 빈티지 재질(바랜 종이색 · 종이 질감 · 타자기 라벨 · 필름 톤 사진). 바랜 종이 · 잉크 · 카멜 라벨 · 장롱 초록 띠 · 레드는 로고와 네이버 플레이스 버튼에만 */
+/* 모던 빈티지(v0.3.2): 모던한 틀(고딕 제목 · 여백) + 빈티지 재질(바랜 종이색 · 종이 질감 · 타자기 라벨 · 필름 톤 사진). 바랜 종이 · 잉크 · 카멜 라벨 · 장롱 초록 띠 · 레드는 네이버 플레이스 버튼에만 */
 :root{
   --paper:#F1ECE4;
   --paper2:#E8E1D6;
@@ -47,7 +47,6 @@
   --ink:#1E1C1A;
   --soft:#5E5955;
   --line:#D9D0C3;
-  --red:#C4474A;
   --red-dk:#9C3437;
   --camel:#9A6234;
   --camel-dk:#8A5529;
@@ -103,11 +102,9 @@ h2{ font-weight:600; font-size:clamp(2.1rem, 7vw, 3.4rem); line-height:1.05; let
 /* 히어로 */
 .hero{ padding:28px 0 84px; }
 .hero-grid{ display:grid; gap:36px; }
-/* 로고 배지: 사장님 로고 원형(붉은 원) 그대로 작게 */
 .hero .kicker{ font-family:var(--mono); font-size:.88rem; letter-spacing:.08em; text-transform:uppercase; color:var(--camel-dk); }
 .hero h1{ margin-top:18px; }
 .hero h1 img{ width:min(100%, 520px); height:auto; }
-.space-quote{ font-weight:500; font-size:clamp(1.1rem, 3vw, 1.35rem); line-height:1.75; margin-top:28px; color:var(--green-ink); max-width:24em; }
 .facts{ display:flex; flex-wrap:wrap; gap:6px 18px; margin-top:22px; list-style:none; font-size:.92rem; color:var(--soft); }
 .facts b{ color:var(--ink); font-weight:600; }
 .cta3{ display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:10px; margin-top:28px; }
@@ -151,6 +148,7 @@ h2{ font-weight:600; font-size:clamp(2.1rem, 7vw, 3.4rem); line-height:1.05; let
 .menu-note a{ color:var(--ink); }
 
 /* 공간: 장롱 그린 띠 */
+.space-quote{ font-weight:500; font-size:clamp(1.1rem, 3vw, 1.35rem); line-height:1.75; margin-top:28px; color:var(--green-ink); max-width:24em; }
 .space{ background:var(--green); color:var(--green-ink); }
 .space .no{ color:var(--camel-lt); }
 .space .h2-ko{ color:var(--green-soft); }
@@ -304,7 +302,7 @@ h2{ font-weight:600; font-size:clamp(2.1rem, 7vw, 3.4rem); line-height:1.05; let
       <ul class="drinks reveal">
         <li><b>아인슈페너<span>Einspänner</span></b><em>크림과 커피를 함께 마시면 더욱 맛있게 드실 수 있습니다</em></li>
         <li><b>흑임자슈페너<span>Black Sesame</span></b><em>고소~한 흑임자 크림이 올라간 라떼</em></li>
-        <li><b>카푸치노<span>Cappuccino</span></b><em>추운계절이 돌아오면 찾게되는 '카푸치노'</em></li>
+        <li><b>카푸치노<span>Cappuccino</span></b></li>
         <li><b>초당옥수수라떼 · 딸기라떼<span>Seasonal</span></b><em>딸기청으로 만드는 딸기라떼 · 초당옥수수라떼</em></li>
       </ul>
       <p class="menu-note reveal">아르무아는 La Marzocco GB5 머신을 사용합니다. 전체 메뉴와 가격은 <a href="https://m.place.naver.com/restaurant/1872641035/home" target="_blank" rel="noopener">네이버 플레이스</a>에서 확인해 주세요.</p>
