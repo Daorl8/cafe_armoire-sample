@@ -159,7 +159,7 @@ h2{ font-weight:600; font-size:clamp(2.1rem, 7vw, 3.4rem); line-height:1.05; let
 .gallery figure.wide{ grid-column:1 / -1; aspect-ratio:3/2; }
 @media (max-width:899px){ .gallery figure.last{ grid-column:1 / -1; aspect-ratio:16/9; } }
 .gallery img{ width:100%; height:100%; object-fit:cover; }
-.gallery figcaption{ position:absolute; left:12px; bottom:10px; font-family:var(--mono); font-size:.9rem; color:#FFFFFF; text-shadow:0 1px 6px rgba(0,0,0,.6); }
+.gallery figcaption{ position:absolute; left:0; right:0; bottom:0; padding:34px 12px 10px; font-family:var(--mono); font-size:.9rem; color:#FFFFFF; background:linear-gradient(to top, rgba(20,15,12,.68), rgba(20,15,12,0)); } /* R-11: 사진 위 글자는 어두운 바탕 */
 .floor{ display:grid; gap:10px; margin-top:28px; list-style:none; }
 .floor li{ border-top:1px solid rgba(239,232,220,.3); padding-top:12px; }
 .floor b{ font-weight:600; font-size:1.1rem; letter-spacing:-.01em; display:block; }
@@ -177,6 +177,7 @@ h2{ font-weight:600; font-size:clamp(2.1rem, 7vw, 3.4rem); line-height:1.05; let
 .rent{ margin-top:56px; padding:26px 22px; background:var(--card); border:1px solid var(--line); border-radius:var(--r); display:grid; gap:14px; }
 .rent b{ font-weight:600; font-size:1.1rem; }
 .rent .row{ display:flex; flex-wrap:wrap; gap:10px; }
+@media (max-width:899px){ .shop-photos{ order:2; } }
 @media (min-width:900px){ .shop-grid{ grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:72px; } .rent{ grid-template-columns:minmax(0,1fr) auto; align-items:center; padding:28px 32px; } }
 
 /* 오시는 길 */
@@ -303,7 +304,7 @@ h2{ font-weight:600; font-size:clamp(2.1rem, 7vw, 3.4rem); line-height:1.05; let
       <ul class="drinks reveal">
         <li><b>아인슈페너<span>Einspänner</span></b><em>크림과 커피를 함께 마시면 더욱 맛있게 드실 수 있습니다</em></li>
         <li><b>흑임자슈페너<span>Black Sesame</span></b><em>고소~한 흑임자 크림이 올라간 라떼</em></li>
-        <li><b>카푸치노<span>Cappuccino</span></b><em>추운 계절, 휘낭시에와 함께</em></li>
+        <li><b>카푸치노<span>Cappuccino</span></b><em>추운계절이 돌아오면 찾게되는 '카푸치노'</em></li>
         <li><b>초당옥수수라떼 · 딸기라떼<span>Seasonal</span></b><em>딸기청으로 만드는 딸기라떼 · 초당옥수수라떼</em></li>
       </ul>
       <p class="menu-note reveal">아르무아는 La Marzocco GB5 머신을 사용합니다. 전체 메뉴와 가격은 <a href="https://m.place.naver.com/restaurant/1872641035/home" target="_blank" rel="noopener">네이버 플레이스</a>에서 확인해 주세요.</p>
